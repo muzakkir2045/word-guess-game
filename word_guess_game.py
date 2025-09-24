@@ -20,14 +20,14 @@ while turns > 0:
         if char in guesses:
             print(char,end=" ")
         else:
-            print("_")
+            print("_",end=' ')
             failed += 1
     if failed == 0:
-        print("You Win")
+        print("\nYou Win")
         print("The word is : ",word)
         break
     print()
-    guess = input("Guess a character : ")
+    guess = input("Guess a character : ").lower()
     guesses += guess
     if guess not in word:
         turns -= 1
